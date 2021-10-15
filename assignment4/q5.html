@@ -12,34 +12,41 @@
 
 <body>
     <div class="container-fluid">
-        
+
         <!-- Jumbotron -->
         <div class="row">
             <div class="col">
                 <div class="jumbotron">
                     <h1 class="display-4">Question 5</h1>
-                    <p class="lead">Write a function that accepts a string as a parameter and count the number of VOWELS within the string!</p>
+                    <p class="lead">Create a function to count vowels</p>
                 </div>
             </div>
         </div>
-
-        <!-- Calculate Form -->
         <div class="row">
             <div class="col">
                 <div class="form-group">
-                    <label for="wVowels">Please enter your word</label>
-                    <input type="text" class="form-control" id="wVowels">
+                    <label for="nText">Text</label>
+                    <input type="number" class="form-control" id="nText">
                 </div>
+                <button type="button" class="btn btn-primary float-right" id="cVowels">Count Vowels</button>
             </div>
-            <div class="col">
-                <div class="form-group">
-                    <label for="ansVowels">Answer</label>
-                    <input type="text" class="form-control" id="ansVowels" aria-describedby="emailHelp">
-                </div>
-                <button type="button" class="btn btn-primary float-right" id="countVowels">COUNTS</button>
-            </div>
-        </div>        
+        </div>
     </div>
+
+    <script>
+        function countVowel(str) {
+
+            const count = str.match(/[aeiou]/gi).length;
+
+            return count;
+        }
+
+        const string = prompt('Enter a string: ');
+
+        const result = countVowel(string);
+
+        alert(result);
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -47,7 +54,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
-    <script src="js/q3.js"></script>
+    <script src="js/q5.js"></script>
+
 </body>
 
 </html>
