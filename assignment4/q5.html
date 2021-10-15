@@ -11,37 +11,13 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-
-        <!-- Jumbotron -->
-        <div class="row">
-            <div class="col">
-                <div class="jumbotron">
-                    <h1 class="display-4">Question 5</h1>
-                    <p class="lead">Create a function to count vowels</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="form-group">
-                    <label for="nText">Text</label>
-                    <input type="number" class="form-control" id="nText">
-                </div>
-                <button type="button" class="btn btn-primary float-right" id="cVowels">Count Vowels</button>
-            </div>
-        </div>
-    </div>
-
-    <script>
+        <script>
         function countVowel(str) {
 
             const count = str.match(/[aeiou]/gi).length;
-
             return count;
         }
-
-        const string = prompt('Enter a string: ');
+        const string = prompt('Enter a Text: ');
 
         const result = countVowel(string);
 
