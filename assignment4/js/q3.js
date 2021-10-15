@@ -1,12 +1,13 @@
-function factorial(n){
+let calc = document.getElementById("calFactorial");
 
-    if(n == 0 || n == 1){
-        return 1;
-    }else{
-        return n * factorial(n-1);
+calc.addEventListener("click", function(){
+    const num = document.querySelector("#nFactorial").value;
+    var arr = 1;
+    for (var i = num; i > 0; i--) {
+        arr *= i
     }
-}
-
-let n = 5;
-answer = factorial(n)
-console.log("The factorial of " + n + " is " + answer);
+    if (num < 0) {
+        alert("negative numbers do not have a factorial")
+    }
+    alert(arr);
+})
