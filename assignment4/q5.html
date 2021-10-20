@@ -5,33 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table Booking App - Booking Page</title>
+    <title>ASSIGNMENT 4 (QUESTION 5)</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 
 <body>
-        <script>
-        function countVowel(str) {
+    <div class="container-fluid">
 
-            const count = str.match(/[aeiou]/gi).length;
-            return count;
-        }
-        const string = prompt('Enter a Text: ');
+        <div class="row">
+            <div class="col">
+                <div class="jumbotron">
+                    <h1 class="display-4">Question 5</h1>
+                    <p class="lead">This page is to COUNT the number of VOWELS within the STRING</p>
+                </div>
+            </div>
+        </div>
 
-        const result = countVowel(string);
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="nVowels">Please insert your WORD / STRING</label>
+                    <input type="text" class="form-control" id="nVowels">
+                </div>
+                <button type="button" class="btn btn-primary float-right" id="cVowels">COUNT</button>
+            </div>            
+        </div>
+    </div>
 
-        alert(result);
-    </script>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
     <script src="js/q5.js"></script>
-
 </body>
 
 </html>
