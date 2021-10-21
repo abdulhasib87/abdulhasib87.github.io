@@ -10,8 +10,8 @@ function checkPalindrome(str) {
     alert("It is a palindrome");    
 }  
 
-let palBtn = document.getElementById("cPalindrome")
-palBtn.addEventListener("click", function(){
+let palindromeBtn = document.getElementById("cPalindrome")
+palindromeBtn.addEventListener("click", function(){
     let getString = document.getElementById("nPalindrome")
     checkPalindrome(getString.value)           
 })

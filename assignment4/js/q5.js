@@ -10,9 +10,9 @@ function countVowel(str) {
     return count
 }
 
-let vowBtn = document.getElementById("cVowels")
-vowBtn.addEventListener("click", function(){
+let vowelBtn = document.getElementById("cVowels")
+vowelBtn.addEventListener("click", function(){
     let getString = document.getElementById("nVowels")
-    let a = countVowel(getString.value)    
-    alert("Total vowels used: "+ a)           
+    let x = countVowel(getString.value)    
+    alert("The total vowels used: "+ x)           
 })
