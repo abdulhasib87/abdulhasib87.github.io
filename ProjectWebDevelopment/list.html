@@ -57,76 +57,29 @@
             </div>
         </div>
 
-        <!-- Booking Form -->
-
-        <div class="col">
-            <div class="form-group">
-                <label for="userName">Your Name</label>
-                <input type="text" class="form-control" id="userName">
+         <!-- Booking List -->
+         <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-primary" id="refreshNow">Refresh Now</button>
+                <table class="table table-striped" id="bookingNameList">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Hp Number</th>
+                            <th scope="col">Flavour</th>
+                            <th scope="col">Content(ml)</th>
+                            <th scope="col">Power</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-primary" id="refreshNow" style="float: right;">Refresh Now</button>
             </div>
         </div>
-        <div class="col">
-            <div class="form-group">
-                <label for="userNumber">Hp Number</label>
-                <input type="number" class="form-control" id="userNumber">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="form-group">
-                    <label for="flavorType">Flavour</label>
-                    <select class="form-control" id="flavorType">
-                        <option>Tobaco Vanila</option>
-                        <option>Hazel Nut</option>
-                        <option>Keladi Cheese Susu</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col">
-                <div class="form-group">
-                    <label for="flavorContent">Content (ml)</label>
-                    <select class="form-control" id="flavorContent">
-                        <option>5</option>
-                        <option>10</option>
-                        <option>15</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col">
-                <div class="form-group">
-                    <label for="flavorPower">Power</label>
-                    <select class="form-control" id="flavorPower">
-                        <option>Medium</option>
-                        <option>High</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col">
-                <div class="form-group">
-                    <label for="userPax">Quantity</label>
-                    <select class="form-control" id="userPax">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="form-group">
-                <label for="userRemarks">Remarks</label>
-                <textarea class="form-control" id="userRemarks" rows="3"></textarea>
-            </div>
-            <button type="button" class="btn btn-primary float-right" id="bookNow">Book Now</button>
-        </div>
-
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -135,7 +88,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
-    <script src="js/book.js"></script>
+    <script src="js/list.js"></script>
 </body>
 
 </html>
