@@ -3,25 +3,37 @@ bookNowBtn.addEventListener("click", function () {
     let userName = document.getElementById("userName")
     let userNameVal = userName.value
 
-    let userEmail = document.getElementById("userEmail")
-    let userEmailVal = userEmail.value
+    let userNumber = document.getElementById("userNumber")
+    let userHpNumberVal = userNumber.value
 
-    let userPax = document.getElementById("userPax")
-    let userPaxVal = userPax.value
+    let flavorType = document.getElementById("flavorType")
+    let userFlavourVal = flavorType.value
+
+    let flavorContent = document.getElementById("flavorContent")
+    let userContentVal = flavorContent.value
+
+    let flavorPower = document.getElementById("flavorPower")
+    let userPowerVal = flavorPower.value
+
+    let userQuantity = document.getElementById("userQuantity")
+    let userQuantityVal = userQuantity.value
 
     let userRemarks = document.getElementById("userRemarks")
     let userRemarksVal = userRemarks.value
 
-    BookNow(userNameVal, userEmailVal, userPaxVal, userRemarksVal)
+    BookNow(userNameVal, userHpNumberVal, userFlavourVal, userContentVal, userPowerVal, userQuantityVal, userRemarksVal)
 })
 
-function BookNow(userName, userEmail, userPax, userRemarks) {
+function BookNow(userName, userHpNumber, userFlavour, userContent, userPower, userQuantity, userRemarks) {
     let url = 'https://api.sheety.co/579e64b288625faf74669abdc4fe9e07/bookingApp2/booking';
     let body = {
         booking: {
             name: userName,
-            email: userEmail,
-            pax: userPax,
+            hpnumber: userHpNumber,
+            flavor: userFlavour,
+            content: userContent,
+            power: userPower,
+            quantity: userQuantity,
             remarks: userRemarks
         }
     }
