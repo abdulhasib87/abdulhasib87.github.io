@@ -21,25 +21,25 @@ function GetBooking() {
 
             //load all rows from Sheety API
             for (let i = 0; i < json.bookings.length; i++) {
-                let gName = json.bookings[i].name;
-                let gHpnumber = json.bookings[i].hpnumber;
-                let gFlavor = json.bookings[i].flavor;
-                let gContent = json.bookings[i].content;
-                let gPower = json.bookings[i].power;
-                let gQuantity = json.bookings[i].quantity;
-                let gRemarks = json.bookings[i].remarks;
-                let gId = json.bookings[i].id;
+                let name = json.bookings[i].name;
+                let hpnumber = json.bookings[i].hpnumber;
+                let flavor = json.bookings[i].flavor;
+                let content = json.bookings[i].content;
+                let power = json.bookings[i].power;
+                let quantity = json.bookings[i].quantity;
+                let remarks = json.bookings[i].remarks;
+                let Id = json.bookings[i].id;
                 let btnId = "delete" + gId;
 
                 let row = bookingNameList.insertRow(bookingNameList.rows.length)
-                row.insertCell(0).innerHTML = gId
-                row.insertCell(1).innerHTML = gName
-                row.insertCell(2).innerHTML = gHpnumber
-                row.insertCell(3).innerHTML = gFlavor
-                row.insertCell(4).innerHTML = gContent
-                row.insertCell(5).innerHTML = gPower
-                row.insertCell(6).innerHTML = gQuantity
-                row.insertCell(7).innerHTML = gRemarks  
+                row.insertCell(0).innerHTML = Id
+                row.insertCell(1).innerHTML = name
+                row.insertCell(2).innerHTML = hpnumber
+                row.insertCell(3).innerHTML = flavor
+                row.insertCell(4).innerHTML = content 
+                row.insertCell(5).innerHTML = power
+                row.insertCell(6).innerHTML = quantity
+                row.insertCell(7).innerHTML = remarks 
                 row.insertCell(8).innerHTML = "<button id='" + btnId + "' type='button' class='btn btn-danger'>Delete</button>"
 
                 bookingIds.push(btnId)
@@ -58,10 +58,11 @@ function GetBooking() {
 }
 
 function DeleteBooking(id) {
-    let url = 'https://api.sheety.co/72897b2095cc735660eae162145da678/bookingApp2/bookings/' + id;
+    let url = 'https://api.sheety.co/72897b2095cc735660eae162145da678/bookingApp2/booking/' + id;
     fetch(url, {
         method: 'DELETE',
     })
+        .then((response) => response.json())
         .then(() => {
             alert("Record id " + id + " deleted!")
             GetBooking()
