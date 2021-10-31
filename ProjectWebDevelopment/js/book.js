@@ -49,5 +49,6 @@ function BookNow(userName, userHpNumber, userFlavour, userContent, userPower, us
             // Do something with object
             console.log(json.booking);
             alert(json.booking.name + " added in the list!")
+            location.replace("list.html")
         });
 }
